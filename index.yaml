@@ -643,6 +643,15 @@ entries:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/cronjob-1.0.0/cronjob-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v2
+    created: "2026-09-07T12:26:20.304730945Z"
+    description: A generic Helm chart for Kubernetes cronjobs
+    digest: cded29a6ae1e72db208146fc9dc6fbb2c79906509f02eb6f421671b62a657c85
+    name: cronjob
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/cronjob-0.0.0-ops-11486-20260907-1222/cronjob-0.0.0-ops-11486-20260907-1222.tgz
+    version: 0.0.0-ops-11486-20260907-1222
+  - apiVersion: v2
     created: "2026-09-07T11:55:03.889702334Z"
     description: A generic Helm chart for Kubernetes cronjobs
     digest: 16dd60da1513e0ae867e453306ef40dd26dd23f97fab9c6a046c0ca7df90a7a3
@@ -267029,4 +267038,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-09-07T12:23:39.216148703Z"
+generated: "2026-09-07T12:26:20.350417717Z"
