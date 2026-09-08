@@ -3,4 +3,4 @@ appVersion: spsh-4135
 description: Helm-Chart for schulportal-client
 name: schulportal-client
 type: application
-version: 0.0.0-spsh-4135-20260908-0537
+version: 0.0.0-spsh-4135-20260908-0543
