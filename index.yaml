@@ -61540,6 +61540,16 @@ entries:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-server-0.0.0-spsh-3881-20260728-2308/dbildungs-iam-server-0.0.0-spsh-3881-20260728-2308.tgz
     version: 0.0.0-spsh-3881-20260728-2308
   - apiVersion: v2
+    appVersion: spsh-3880
+    created: "2026-09-09T09:56:54.92818212Z"
+    description: dBildungs-IAM-server
+    digest: 2ea73bfb642ae0b13462ec29d97d6d99f6155e4f2a44df38ecea7cacf21f0963
+    name: dbildungs-iam-server
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-server-0.0.0-spsh-3880-20260909-0951/dbildungs-iam-server-0.0.0-spsh-3880-20260909-0951.tgz
+    version: 0.0.0-spsh-3880-20260909-0951
+  - apiVersion: v2
     appVersion: spsh-3878
     created: "2026-09-09T07:15:18.548388941Z"
     description: dBildungs-IAM-server
@@ -225205,6 +225215,16 @@ entries:
     version: 0.0.0-spsh-3886-20260709-0838
   - apiVersion: v2
     appVersion: spsh-3882
+    created: "2026-09-09T09:56:55.072598572Z"
+    description: Helm-Chart for schulportal-client
+    digest: 390567f643b5944e6f80d13dddd7643b7930147fdf92aeebefed0f2e42048475
+    name: schulportal-client
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/schulportal-client-0.0.0-spsh-3882-20260909-0952/schulportal-client-0.0.0-spsh-3882-20260909-0952.tgz
+    version: 0.0.0-spsh-3882-20260909-0952
+  - apiVersion: v2
+    appVersion: spsh-3882
     created: "2026-09-09T09:41:09.389067999Z"
     description: Helm-Chart for schulportal-client
     digest: d4f87f6235711198a75f8b2e21e4ab59c25d8f11fd89836f28c5754c40faa6f7
@@ -268480,4 +268500,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-09-09T09:53:55.043625921Z"
+generated: "2026-09-09T09:56:55.154147745Z"
