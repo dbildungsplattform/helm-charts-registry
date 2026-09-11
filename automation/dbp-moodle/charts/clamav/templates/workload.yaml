@@ -1,8 +1,11 @@
-{{- if not (has .Values.kind (list "StatefulSet" "Deployment")) -}}
-{{- fail "Invalid value for .Values.kind, only StatefulSet and Deployment are supported" -}}
+{{- if not (has .Values.kind (list "StatefulSet" "Deployment" "DaemonSet")) -}}
+{{- fail "Invalid value for .Values.kind, only StatefulSet, Deployment and DaemonSet are supported" -}}
 {{- end -}}
 {{- if and .Values.persistentVolume.enabled (ne .Values.kind "StatefulSet")  -}}
 {{- fail "If .Values.persistentVolume.enabled is set to true, then .Values.kind has to be set to \"StatefulSet\"" -}}
+{{- end -}}
+{{- if and .Values.hpa.enabled (eq .Values.kind "DaemonSet")  -}}
+{{- fail "If .Values.hpa.enabled is set to true, then .Values.kind has to be set to \"StatefulSet\" or \"Deployment\"" -}}
 {{- end -}}
 apiVersion: apps/v1
 kind: {{ .Values.kind }}
@@ -11,7 +14,7 @@ metadata:
   labels:
     {{- include "clamav.labels" . | nindent 4 }}
 spec:
-  {{- if not .Values.hpa.enabled }}
+  {{- if and (ne .Values.kind "DaemonSet") (not .Values.hpa.enabled) }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   {{- if eq .Values.kind "StatefulSet" }}
@@ -21,10 +24,10 @@ spec:
     matchLabels:
       {{- include "clamav.selectorLabels" . | nindent 6 }}
   {{- with .Values.updateStrategy }}
-  {{- if eq $.Values.kind "StatefulSet" }}
-  updateStrategy:
-  {{- else }}
+  {{- if eq $.Values.kind "Deployment" }}
   strategy:
+  {{- else }}
+  updateStrategy:
   {{- end }}
     {{- toYaml . | nindent 4 }}
   {{- end }}
@@ -56,6 +59,10 @@ spec:
           image: {{ .Values.image.repository }}:{{ .Values.image.tag | default (printf "%s_base" .Chart.AppVersion) }}
           command:
             - {{ include "clamav.entrypoint" . }}
+          {{- with .Values.extraArgs }}
+          args:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           {{- with .Values.extraEnvVars }}
           env:
@@ -115,6 +122,50 @@ spec:
             timeoutSeconds: {{ .Values.readinessProbe.timeoutSeconds }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+        {{- if .Values.metrics.enabled }}
+        - name: clamav-exporter
+          image: {{ .Values.metrics.image.repository }}:{{ .Values.metrics.image.tag }}
+          imagePullPolicy: {{ .Values.metrics.image.pullPolicy }}
+          args:
+            - --clamav.address=tcp://localhost:3310
+            - --web.listen-address=0.0.0.0:{{ .Values.metrics.port }}
+            - --web.telemetry-path={{ .Values.metrics.path }}
+            {{- with .Values.metrics.extraArgs }}
+            {{- toYaml . | nindent 12 }}
+            {{- end }}
+          {{- with .Values.metrics.extraEnvVars }}
+          env:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          ports:
+            - name: http-metrics
+              containerPort: {{ .Values.metrics.port }}
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: {{ .Values.metrics.path }}
+              port: http-metrics
+            initialDelaySeconds: {{ .Values.metrics.livenessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.metrics.livenessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.metrics.livenessProbe.timeoutSeconds }}
+            failureThreshold: {{ .Values.metrics.livenessProbe.failureThreshold }}
+          readinessProbe:
+            httpGet:
+              path: {{ .Values.metrics.path }}
+              port: http-metrics
+            initialDelaySeconds: {{ .Values.metrics.readinessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.metrics.readinessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.metrics.readinessProbe.timeoutSeconds }}
+            failureThreshold: {{ .Values.metrics.readinessProbe.failureThreshold }}
+          {{- with .Values.metrics.resources }}
+          resources:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.metrics.securityContext }}
+          securityContext:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+        {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
@@ -125,6 +176,10 @@ spec:
       {{- end }}
       {{- with .Values.tolerations }}
       tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.topologySpreadConstraints }}
+      topologySpreadConstraints:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       volumes:
