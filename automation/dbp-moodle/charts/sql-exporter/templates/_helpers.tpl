@@ -31,6 +31,17 @@ Create chart name and version as used by the chart label.
 {{- end }}
 
 {{/*
+Create tls secret name based on the chart name
+*/}}
+{{- define "sql-exporter.tls.name" -}}
+{{- if ((.Values.ingress).tls).secretName -}}
+{{- .Values.ingress.tls.secretName }}
+{{- else -}}
+{{- printf "%s-%s" (include "sql-exporter.fullname" .) "tls" }}
+{{- end -}}
+{{- end -}}
+
+{{/*
 Common labels
 */}}
 {{- define "sql-exporter.labels" -}}
@@ -40,6 +51,9 @@ helm.sh/chart: {{ include "sql-exporter.chart" . }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
+{{- if .Values.commonLabels }}
+{{ toYaml .Values.commonLabels }}
+{{- end }}
 {{- end }}
 
 {{/*
@@ -51,18 +65,95 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
+Common annotations
+*/}}
+{{- define "sql-exporter.annotations" -}}
+{{- if .Values.commonAnnotations }}
+{{ toYaml .Values.commonAnnotations }}
+{{- end }}
+{{- end }}
+
+{{/*
 Create the name of the service account to use
 */}}
 {{- define "sql-exporter.serviceAccountName" -}}
-{{- default "default" .Values.serviceAccount.name }}
-{{- end }}
+{{- if .Values.serviceAccount.create -}}
+{{- default (include "sql-exporter.fullname" .) .Values.serviceAccount.name -}}
+{{- else -}}
+{{- default "default" .Values.serviceAccount.name -}}
+{{- end -}}
+{{- end -}}
 
 {{- define "sql-exporter.volumes" -}}
-{{- if or .Values.createConfig .Values.collectorFiles -}}
-{{- true | quote -}}
-{{- else if .Values.extraVolumes -}}
+{{- if or .Values.createConfig .Values.collectorFiles .Values.webConfig.enabled .Values.extraVolumes -}}
 {{- true | quote -}}
 {{- else -}}
 {{- false | quote -}}
+{{- end -}}
+{{- end -}}
+
+{{- define "sql-exporter.basicAuth.secretName" -}}
+{{- if .Values.webConfig.basicAuth.initFromSecret.secretName -}}
+{{- .Values.webConfig.basicAuth.initFromSecret.secretName -}}
+{{- else -}}
+{{- printf "%s-%s" (include "sql-exporter.fullname" .) "web-basic-auth" -}}
+{{- end -}}
+{{- end -}}
+
+{{- define "sql-exporter.webconfig.yaml" -}}
+{{- $conf := "" -}}
+{{- if and .Values.webConfig.template (ne .Values.webConfig.template "") -}}
+{{- /* User provided custom template */ -}}
+{{- if typeIsLike "string" .Values.webConfig.template -}}
+{{- $conf = tpl .Values.webConfig.template . | fromYaml -}}
+{{- else -}}
+{{- $conf = .Values.webConfig.template -}}
+{{- end -}}
+{{- tpl ($conf | toYaml ) . | fromYaml | toYaml -}}
+{{- else -}}
+{{- /* Generate default template */ -}}
+{{- if .Values.webConfig.tls.secretName }}
+tls_server_config:
+  cert_file: /tls/{{ .Values.webConfig.tls.certFile }}
+  key_file: /tls/{{ .Values.webConfig.tls.keyFile }}
+  min_version: TLS13
+  prefer_server_cipher_suites: true
+  cipher_suites:
+    - TLS_AES_128_GCM_SHA256
+    - TLS_AES_256_GCM_SHA384
+{{- end }}
+{{- if and .Values.webConfig.basicAuth.enabled (not .Values.webConfig.basicAuth.initFromSecret.enabled) }}
+basic_auth_users:
+{{- range $user, $hash := .Values.webConfig.basicAuth.users }}
+  {{ $user }}: {{ $hash | quote }}
+{{- end }}
+{{- end }}
+{{- end -}}
+{{- end -}}
+
+{{- define "sql_exporter.config.yaml" -}}
+{{- $conf := "" -}}
+{{- if typeIsLike "string" .Values.config -}}
+{{- $conf = (tpl .Values.config .) | fromYaml -}}
+{{- else -}}
+{{- $conf = .Values.config -}}
+{{- end -}}
+{{- /*
+Do the wired "fromYaml | toYaml" to reformat the config.
+Reformat '100s' to 100s for example.
+*/ -}}
+{{- tpl ($conf | toYaml ) . | fromYaml | toYaml -}}
+{{- end -}}
+
+{{/*
+Service port - use explicit value if set, otherwise 443 for TLS, 80 for HTTP
+*/}}
+{{- define "sql-exporter.servicePort" -}}
+{{- if .Values.service.port -}}
+{{ .Values.service.port }}
+{{- else if and .Values.webConfig.enabled .Values.webConfig.tls.secretName -}}
+443
+{{- else -}}
+80
 {{- end -}}
 {{- end -}}
