@@ -21,12 +21,6 @@ spec:
       {{- with .Values.service.nodePort }}
       nodePort: {{ . }}
       {{- end }}
-    {{- if .Values.metrics.enabled }}
-    - port: {{ .Values.metrics.port }}
-      targetPort: http-metrics
-      protocol: TCP
-      name: http-metrics
-    {{- end }}
   selector:
     app.kubernetes.io/name: {{ include "clamav.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}

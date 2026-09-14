@@ -170,10 +170,10 @@ dbpMoodle:
     affinity: {}
     tolerations: []
     resources: {}
-    # -- Which moodle-tools image to use
-    image:
-      repository: "ghcr.io/dbildungsplattform/moodle-tools"
-      tag: "1.2.0"
+    # -- Which kubectl image to use
+    repository: "ghcr.io/dbildungsplattform"
+    image: "moodle-tools"
+    tag: "1.2.0"
 
   moodleUpdatePreparationHook:
     rules:
@@ -237,9 +237,9 @@ dbpMoodle:
     # replace_db_user_during_restore is only added for the migration from local to managed postgres as the restore script needs to be adjusted dynamically
     replace_db_user_during_restore: false
     dump_kind: "full" # Possible values: full, custom
-    image:
-      repository: "ghcr.io/dbildungsplattform/moodle-tools"
-      tag: "1.2.0"
+    repository: "ghcr.io/dbildungsplattform"
+    image: "moodle-tools"
+    tag: "1.2.0"
     resources:
       limits:
         cpu: 2000m
@@ -420,7 +420,7 @@ moodle:
     enabled: true
     image:
       repository: lusotycoon/apache-exporter
-      tag: v1.1.1
+      tag: v1.0.12
     service:
       type: ClusterIP
     # -- Resources have to be set so that the horizontal pod autoscaler for moodle can read the moodle cpu consumption correctly
@@ -565,7 +565,7 @@ etherpadlite:
   enabled: false
   image:
     repository: "ghcr.io/dbildungsplattform/etherpad"
-    tag: "2.6.1.0"
+    tag: "3.3.3.0"
   # Currently this data is doubled with the env vars because we need the fields for backup and retore jobs
   externalDatabase:
     # -- Type of DB to provision, possible values are "postgres"
@@ -874,8 +874,7 @@ backup-cronjob:
 clamav:
   enabled: true
   image:
-    repository: "clamav/clamav"
-    tag: "1.5.4"
+    tag: "1.5.1"
     pullPolicy: "IfNotPresent"
   kind: StatefulSet
   service:

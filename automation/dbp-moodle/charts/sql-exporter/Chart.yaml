@@ -1,10 +1,7 @@
 annotations:
-  artifacthub.io/signKey: |
-    fingerprint: 9F218BE64F503809BB829626B9024AEA76E9BCB3
-    url: https://burningalchemist.github.io/sql_exporter/pubkey.gpg
-  git/commit-sha: 9823a55ff0621cd2ef7163271998a3e19d93e94a
+  git/commit-sha: 8ce8744999acae483d96786420b82e439c0f431e
 apiVersion: v2
-appVersion: 0.24.8
+appVersion: 0.15.0
 description: Database-agnostic SQL exporter for Prometheus
 home: https://github.com/burningalchemist/sql_exporter
 keywords:
@@ -20,4 +17,4 @@ name: sql-exporter
 sources:
 - https://github.com/burningalchemist/sql_exporter
 type: application
-version: 0.18.10
+version: 0.6.1

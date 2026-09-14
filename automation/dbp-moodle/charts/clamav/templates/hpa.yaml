@@ -10,7 +10,7 @@ metadata:
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
-    kind: {{ .Values.kind }}
+    kind: StatefulSet
     name: {{ template "clamav.fullname" . }}
   minReplicas: {{ .Values.replicaCount }}
   maxReplicas: {{ .Values.hpa.maxReplicas }}

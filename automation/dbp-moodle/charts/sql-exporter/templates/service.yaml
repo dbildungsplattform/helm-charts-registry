@@ -7,15 +7,14 @@ metadata:
     {{- with .Values.service.labels }}
       {{- toYaml . | nindent 4 }}
     {{- end }}
+  {{- with .Values.service.annotations }}
   annotations:
-    {{- include "sql-exporter.annotations" . | nindent 4 }}
-    {{- with .Values.service.annotations }}
-      {{- toYaml . | nindent 4 }}
-    {{- end }}
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ include "sql-exporter.servicePort" . }}
+    - port: {{ .Values.service.port }}
       targetPort: http
       protocol: TCP
       name: http

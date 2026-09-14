@@ -38,7 +38,7 @@
     },
     "kind": {
       "type": "string",
-      "enum": ["DaemonSet", "Deployment", "StatefulSet"]
+      "enum": ["Deployment", "StatefulSet"]
     },
     "updateStrategy": {
       "type": [
