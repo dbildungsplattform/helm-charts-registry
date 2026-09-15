@@ -203066,6 +203066,16 @@ entries:
     version: 0.0.0-dbp-0000-20251017-1306
   ionos-exporter:
   - apiVersion: v2
+    appVersion: 0.6.0
+    created: "2026-09-15T13:52:56.799006773Z"
+    description: A Helm chart for Kubernetes
+    digest: e721601058875c9a2915263e7d1e2e193f3c27b829a09aec050651017a68ec81
+    name: ionos-exporter
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/ionos-exporter-0.6.0/ionos-exporter-0.6.0.tgz
+    version: 0.6.0
+  - apiVersion: v2
     appVersion: 0.5.0
     created: "2026-06-16T11:20:47.844724986Z"
     description: A Helm chart for Kubernetes
@@ -270724,4 +270734,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-09-15T12:30:33.925641019Z"
+generated: "2026-09-15T13:52:56.853609037Z"
