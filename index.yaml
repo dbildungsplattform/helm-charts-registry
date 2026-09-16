@@ -205097,6 +205097,16 @@ entries:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/schulportal-client-0.0.1/schulportal-client-0.0.1.tgz
     version: 0.0.1
   - apiVersion: v2
+    appVersion: sha-e0b78a3
+    created: "2026-09-16T11:19:45.664044088Z"
+    description: Helm-Chart for schulportal-client
+    digest: 8e92b7c187364d519f7bb7a5d0c4e1ca8a7341141c7611e2615315d3a4c34b46
+    name: schulportal-client
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/schulportal-client-0.0.1-20260916-1114/schulportal-client-0.0.1-20260916-1114.tgz
+    version: 0.0.1-20260916-1114
+  - apiVersion: v2
     appVersion: sha-aafa720
     created: "2026-09-10T16:07:20.255300046Z"
     description: Helm-Chart for schulportal-client
@@ -270923,4 +270933,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-09-16T11:16:43.078109175Z"
+generated: "2026-09-16T11:19:45.731537607Z"
