@@ -1,8 +1,12 @@
 # Changelog
-## Unreleased
-### Changes
-- **DBP-2467** Set required stack-plugin config via code
-  - Set the maximaversion, platform and maximacommandserver values via php-config.
+
+## [Unreleased]
+### Feature
+- Support for deploying arbitrary Kubernetes objects via the chart
+  - Added new value `extraObjects` (list, defaults to empty)
+  - Each entry is a full manifest (`apiVersion`, `kind`, `metadata.name`) rendered as-is
+  - Objects get the release namespace by default and the default Helm labels (`app.kubernetes.io/...`, `helm.sh/chart`); explicitly set namespace/labels take precedence
+  - Malformed entries (missing `apiVersion`, `kind` or `metadata.name`) fail the rendering with a clear error
 
 ## [1.8.2] - 2026-09-22
 ### Changes
@@ -10,6 +14,9 @@
   - Bump Etherpad Version to 3.3.3.0
 - **DBP-2522** Adjust Backup retention time
   - Lower the Retention Time of Backups (Default Value) to 1 month.
+- **DBP-2524** Support for a custom `robots.txt` served from the Moodle webroot
+  - The content can be set in the values under `dbpMoodle.robotsTxt`
+
 ### Dependencies
 - Update dependencies
   - Updates `php-fpm-trixie` from 8.2.31 to 8.2.33 (image)
