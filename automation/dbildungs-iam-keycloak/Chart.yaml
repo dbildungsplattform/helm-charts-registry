@@ -3,4 +3,4 @@ appVersion: spsh-4113
 description: A Helm Chart for the dbildungs-iam-keycloak
 name: dbildungs-iam-keycloak
 type: application
-version: 0.0.0-spsh-4113-20260921-1523
+version: 0.0.0-spsh-4113-20260922-1358
