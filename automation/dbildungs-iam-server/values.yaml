@@ -35,6 +35,7 @@ ldap:
   ersatzschulenDomain: ersatzschule-sh.de
   base_dn: dc=schule-sh,dc=de
   retryWrapperDefaultRetries: 3
+  retryWrapperRetryDelayInMs: 15000
 
 eflkLdap:
   enabled: false
@@ -43,14 +44,7 @@ eflkLdap:
   ersatzschulenDomain: ersatzschule-sh.de
   base_dn: dc=schule-sh,dc=de
   retryWrapperDefaultRetries: 3
-
-eflkLdapUndi:
-  enabled: false
-  url: ldap://dbildungs-iam-ldap.spsh-xxx.svc.cluster.local
-  oeffentlicheSchulenDomain: schule-sh.de
-  ersatzschulenDomain: ersatzschule-sh.de
-  base_dn: dc=schule-sh,dc=de
-  retryWrapperDefaultRetries: 3
+  retryWrapperRetryDelayInMs: 15000
 
 itslearning:
   enabled: false
@@ -101,8 +95,6 @@ emailMicroserviceAuth:
   secretName: dbildungs-iam-server-email
   ldap_bind_dn: ""
   ldap_admin_password: ""
-  ldap_undi_bind_dn: ""
-  ldap_undi_admin_password: ""
   secrets_json: ""
   ox_password: ""
 
@@ -133,6 +125,7 @@ vidis:
   url: "http://localhost:10000"
   region: "Schleswig-Holstein"
   syncSchoolsPageSize: 5
+  keycloakClientId: "vidis-test"
 
 backend:
   replicaCount: 1
