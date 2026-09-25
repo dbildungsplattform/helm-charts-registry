@@ -145161,6 +145161,56 @@ entries:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/dbp-moodle-0.0.0-dbp-2221-20260402-1412/dbp-moodle-0.0.0-dbp-2221-20260402-1412.tgz
     version: 0.0.0-dbp-2221-20260402-1412
   - apiVersion: v2
+    appVersion: DBP-2178
+    created: "2026-09-25T10:45:25.40200804Z"
+    dependencies:
+    - name: moodle
+      repository: file://charts/moodle
+      version: 27.0.5
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 19.5.3
+    - condition: valkey.enabled
+      name: valkey
+      repository: https://dbildungsplattform.github.io/helm-charts-registry/
+      version: 3.0.1
+    - alias: moodlecronjob
+      name: cronjob
+      repository: file://charts/cronjob
+      version: 0.1.0
+    - alias: backup-cronjob
+      condition: dbpMoodle.backup.enabled
+      name: cronjob
+      repository: file://charts/cronjob
+      version: 0.1.0
+    - alias: etherpadlite
+      condition: etherpadlite.enabled
+      name: etherpad
+      repository: file://charts/etherpad
+      version: 0.1.0
+    - alias: clamav
+      condition: clamav.enabled
+      name: clamav
+      repository: https://wiremind.github.io/wiremind-helm-charts
+      version: 3.7.3
+    - condition: sql-exporter.enabled
+      name: sql-exporter
+      repository: https://burningalchemist.github.io/sql_exporter/
+      version: 0.18.10
+    description: 'This is a Helm Chart bundling some of the bitnami resources to deploy
+      Moodle for DBildungsplattform. Extending them with features such as  PostgreSQL
+      support, Horizontal Autoscaling capabilities, Redis Session Store, Etherpad-Lite.
+      The Chart can be deployed without any modification but it is advised to set
+      own secrets acccording to this readme. '
+    digest: 2c11f95ba6c59c866076a4f4a30312ad4d8743f9a23f37f4087c4c11ea2a7657
+    home: https://dbildungsplattform.github.io/dbp-moodle/
+    name: dbp-moodle
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbp-moodle-0.0.0-dbp-2178-20260925-1041/dbp-moodle-0.0.0-dbp-2178-20260925-1041.tgz
+    version: 0.0.0-dbp-2178-20260925-1041
+  - apiVersion: v2
     appVersion: DBP-2093
     created: "2026-02-26T11:12:35.121512001Z"
     dependencies:
@@ -274646,4 +274696,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-09-25T09:53:35.719378683Z"
+generated: "2026-09-25T10:45:25.457619493Z"
