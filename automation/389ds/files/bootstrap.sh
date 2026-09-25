@@ -2,6 +2,8 @@
 #
 # config script to idempotently bootstrap 389 ds based on https://www.port389.org/docs/389ds/howto/howto-deploy-389ds-on-openshift.html
 #
+# force main process to exit on error when bootstrap fails
+trap 'echo "bootstrap failed"; kill 1' ERR
 set -euof pipefail
 
 # constants
