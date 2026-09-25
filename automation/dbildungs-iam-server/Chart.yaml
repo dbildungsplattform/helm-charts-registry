@@ -1,6 +1,6 @@
 apiVersion: v2
-appVersion: dbp-2553
+appVersion: sha-25e513d
 description: dBildungs-IAM-server
 name: dbildungs-iam-server
 type: application
-version: 0.0.0-dbp-2553-20260925-0950
+version: 0.0.1-20260925-1131
