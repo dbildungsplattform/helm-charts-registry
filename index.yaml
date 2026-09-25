@@ -342,6 +342,16 @@ entries:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/389ds-0.0.0-dbp-2463-20260811-2113/389ds-0.0.0-dbp-2463-20260811-2113.tgz
     version: 0.0.0-dbp-2463-20260811-2113
   - apiVersion: v2
+    appVersion: 3.0.6
+    created: "2026-09-25T14:34:34.64701074Z"
+    description: A Helm chart for Kubernetes
+    digest: 307741bd3e11f769e041f218c28add5ad856e03defc67097255ba720437e2228
+    name: 389ds
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/389ds-0.0.0-dbp-2449-20260925-1431/389ds-0.0.0-dbp-2449-20260925-1431.tgz
+    version: 0.0.0-dbp-2449-20260925-1431
+  - apiVersion: v2
     appVersion: 2.5.3
     created: "2026-03-11T16:08:03.988240754Z"
     description: A Helm chart for Kubernetes
@@ -274775,4 +274785,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-09-25T13:20:11.589952192Z"
+generated: "2026-09-25T14:34:34.702346843Z"
