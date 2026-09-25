@@ -8,12 +8,18 @@ dependencies:
 - name: valkey
   repository: https://dbildungsplattform.github.io/helm-charts-registry/
   version: 3.0.1
+- name: postgresql
+  repository: https://charts.bitnami.com/bitnami
+  version: 15.5.38
 - name: cronjob
   repository: file://charts/cronjob
   version: 0.1.0
 - name: cronjob
   repository: file://charts/cronjob
   version: 0.1.0
+- name: postgresql
+  repository: https://charts.bitnami.com/bitnami
+  version: 15.5.38
 - name: etherpad
   repository: file://charts/etherpad
   version: 0.1.0
@@ -23,5 +29,5 @@ dependencies:
 - name: sql-exporter
   repository: https://burningalchemist.github.io/sql_exporter/
   version: 0.18.10
-digest: sha256:3671b89990e3fc8a38dfdb8221796c92e536fd579a00d7837b43fd8594feacdc
-generated: "2026-09-25T10:41:45.107442094Z"
+digest: sha256:f36f07a3c7bd1383721d56a3744fe7ffc508fd4b2c70e16de53cbf7f4a7ea3f9
+generated: "2026-09-11T11:46:14.94663547Z"
