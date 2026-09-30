@@ -58430,6 +58430,16 @@ entries:
     - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-server-0.0.0-spsh-4380-20260924-0833/dbildungs-iam-server-0.0.0-spsh-4380-20260924-0833.tgz
     version: 0.0.0-spsh-4380-20260924-0833
   - apiVersion: v2
+    appVersion: spsh-4352
+    created: "2026-09-30T10:42:49.751984643Z"
+    description: dBildungs-IAM-server
+    digest: 92fef01e63811db4b92d834dbd8bc89393c684843876e1518b6bbd5f3a95d822
+    name: dbildungs-iam-server
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-server-0.0.0-spsh-4352-20260930-1039/dbildungs-iam-server-0.0.0-spsh-4352-20260930-1039.tgz
+    version: 0.0.0-spsh-4352-20260930-1039
+  - apiVersion: v2
     appVersion: spsh-4344
     created: "2026-09-30T10:31:23.701542736Z"
     description: dBildungs-IAM-server
@@ -229089,6 +229099,16 @@ entries:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/schulportal-client-0.0.0-spsh-443-20240308-1239/schulportal-client-0.0.0-spsh-443-20240308-1239.tgz
     version: 0.0.0-spsh-443-20240308-1239
   - apiVersion: v2
+    appVersion: spsh-4352
+    created: "2026-09-30T10:42:50.004808981Z"
+    description: Helm-Chart for schulportal-client
+    digest: e3515bb989ed792bed4560d6f3be796d778800a26c855ca152db77d341894da5
+    name: schulportal-client
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/schulportal-client-0.0.0-spsh-4352-20260930-1039/schulportal-client-0.0.0-spsh-4352-20260930-1039.tgz
+    version: 0.0.0-spsh-4352-20260930-1039
+  - apiVersion: v2
     appVersion: spsh-4341
     created: "2026-09-29T19:34:18.826398776Z"
     description: Helm-Chart for schulportal-client
@@ -275375,4 +275395,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-09-30T10:40:06.187459185Z"
+generated: "2026-09-30T10:42:50.068324898Z"
