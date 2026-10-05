@@ -15613,6 +15613,16 @@ entries:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-keycloak-0.0.0-spsh-474-20240307-1124/dbildungs-iam-keycloak-0.0.0-spsh-474-20240307-1124.tgz
     version: 0.0.0-spsh-474-20240307-1124
   - apiVersion: v2
+    appVersion: spsh-4477
+    created: "2026-10-05T07:55:33.024396207Z"
+    description: A Helm Chart for the dbildungs-iam-keycloak
+    digest: d949fd3751f2159f2508d67955ad4d95cdea4683148dd1bac6636f633015a27a
+    name: dbildungs-iam-keycloak
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-keycloak-0.0.0-spsh-4477-20261005-0750/dbildungs-iam-keycloak-0.0.0-spsh-4477-20261005-0750.tgz
+    version: 0.0.0-spsh-4477-20261005-0750
+  - apiVersion: v2
     appVersion: spsh-4212
     created: "2026-09-09T10:18:36.824768087Z"
     description: A Helm Chart for the dbildungs-iam-keycloak
@@ -58019,6 +58029,16 @@ entries:
     urls:
     - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-server-0.0.0-spsh-4478-20261001-0757/dbildungs-iam-server-0.0.0-spsh-4478-20261001-0757.tgz
     version: 0.0.0-spsh-4478-20261001-0757
+  - apiVersion: v2
+    appVersion: spsh-4477
+    created: "2026-10-05T07:55:33.247062879Z"
+    description: dBildungs-IAM-server
+    digest: bebbd5e25cc4982685d69332b852bfa8e2e876201d706a06df5b639bf19f88c2
+    name: dbildungs-iam-server
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-server-0.0.0-spsh-4477-20261005-0749/dbildungs-iam-server-0.0.0-spsh-4477-20261005-0749.tgz
+    version: 0.0.0-spsh-4477-20261005-0749
   - apiVersion: v2
     appVersion: SPSH-447
     created: "2024-03-25T09:18:18.867427167Z"
@@ -276433,4 +276453,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-10-05T07:52:20.011252178Z"
+generated: "2026-10-05T07:55:33.321626921Z"
