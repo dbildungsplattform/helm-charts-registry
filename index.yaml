@@ -15614,6 +15614,16 @@ entries:
     version: 0.0.0-spsh-474-20240307-1124
   - apiVersion: v2
     appVersion: spsh-4477
+    created: "2026-10-05T08:41:42.830394746Z"
+    description: A Helm Chart for the dbildungs-iam-keycloak
+    digest: d75077aba4f67176b84783eb17021c799ba67483dabc3f2f8ff392feed590ce4
+    name: dbildungs-iam-keycloak
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-keycloak-0.0.0-spsh-4477-20261005-0838/dbildungs-iam-keycloak-0.0.0-spsh-4477-20261005-0838.tgz
+    version: 0.0.0-spsh-4477-20261005-0838
+  - apiVersion: v2
+    appVersion: spsh-4477
     created: "2026-10-05T07:55:33.024396207Z"
     description: A Helm Chart for the dbildungs-iam-keycloak
     digest: d949fd3751f2159f2508d67955ad4d95cdea4683148dd1bac6636f633015a27a
@@ -276473,4 +276483,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-10-05T08:30:53.229678852Z"
+generated: "2026-10-05T08:41:42.875671853Z"
