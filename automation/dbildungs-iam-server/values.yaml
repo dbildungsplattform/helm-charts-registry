@@ -394,7 +394,7 @@ featureFlags:
   setUemPassword: true
 
 emailMicroservice:
-  useService: true
+  useService: false
   endpoint: http://dbildungs-iam-server-email-backend.spsh-xxx.svc.cluster.local:80/
 
 cron:
