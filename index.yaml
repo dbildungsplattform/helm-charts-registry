@@ -27810,6 +27810,16 @@ entries:
     - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-server-0.0.1-20261013-1216/dbildungs-iam-server-0.0.1-20261013-1216.tgz
     version: 0.0.1-20261013-1216
   - apiVersion: v2
+    appVersion: sha-a58f345
+    created: "2026-10-13T12:20:48.470690392Z"
+    description: dBildungs-IAM-server
+    digest: ff113ea9d06d6db6445f809b577073ac6d3f182f42d0a32d2ab7c3a03977b5b8
+    name: dbildungs-iam-server
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-server-0.0.1-20261013-1216/dbildungs-iam-server-0.0.1-20261013-1216.tgz
+    version: 0.0.1-20261013-1216
+  - apiVersion: v2
     appVersion: sha-07b9aa3
     created: "2026-10-13T09:37:31.156356477Z"
     description: dBildungs-IAM-server
@@ -213420,6 +213430,16 @@ entries:
     - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/schulportal-client-0.0.1-20261013-1216/schulportal-client-0.0.1-20261013-1216.tgz
     version: 0.0.1-20261013-1216
   - apiVersion: v2
+    appVersion: sha-4c9c45b
+    created: "2026-10-13T12:20:48.818256924Z"
+    description: Helm-Chart for schulportal-client
+    digest: 1b66e6e5bbed2dd213550b2672eb65b985ade7e297b978b42a33b8ccd5bff0aa
+    name: schulportal-client
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/schulportal-client-0.0.1-20261013-1216/schulportal-client-0.0.1-20261013-1216.tgz
+    version: 0.0.1-20261013-1216
+  - apiVersion: v2
     appVersion: sha-77b70db
     created: "2026-10-13T08:15:26.200237525Z"
     description: Helm-Chart for schulportal-client
@@ -280726,4 +280746,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-10-13T12:18:49.964785238Z"
+generated: "2026-10-13T12:20:48.87062287Z"
