@@ -211393,6 +211393,16 @@ entries:
   grafana-crs:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2026-10-15T14:19:27.397799139Z"
+    description: A Helm chart for Kubernetes
+    digest: e7da36858a785f03a8900def33fadbd0df2302112726802432dd3db3f3e5d303
+    name: grafana-crs
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/grafana-crs-1.0.0/grafana-crs-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2026-06-17T08:30:56.241225191Z"
     description: A Helm chart for Kubernetes
     digest: b855c140587a4bb8e0bae64572aab7f7916379255ff6659a98b66dfad74d8a72
@@ -281296,4 +281306,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-10-15T14:02:17.145953677Z"
+generated: "2026-10-15T14:19:27.429484445Z"
