@@ -8,6 +8,7 @@ grafana:
   logMode: "console"
   storageSize: 10Gi
   ingressClass: nginx
+  loginFormDisabled: false
   keycloakConfig:
     enabled: false
   oauthEnvs: []

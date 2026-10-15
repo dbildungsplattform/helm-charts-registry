@@ -14,6 +14,8 @@ spec:
         requests:
           storage: {{ .Values.grafana.storageSize }}
   config:
+    auth:
+      disable_login_form: {{ .Values.grafana.loginFormDisabled }}
     log:
       mode: {{ .Values.grafana.logMode }}
     auth.generic_oauth:
