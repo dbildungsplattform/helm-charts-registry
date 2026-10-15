@@ -14,13 +14,13 @@ A Helm chart for Kubernetes
 | datasources | list | `[]` |  |
 | folders | list | `[]` |  |
 | fullnameOverride | string | `""` |  |
+| grafana.disableLoginForm | bool | `false` |  |
 | grafana.domain | string | `""` |  |
 | grafana.envs | list | `[]` |  |
 | grafana.grafanaVersion | string | `"12.1.0"` |  |
 | grafana.ingressClass | string | `"nginx"` |  |
 | grafana.keycloakConfig.enabled | bool | `false` |  |
 | grafana.logMode | string | `"console"` |  |
-| grafana.loginFormDisabled | bool | `false` |  |
 | grafana.oauthEnvs | list | `[]` |  |
 | grafana.storageSize | string | `"10Gi"` |  |
 | muteTimings | list | `[]` |  |
