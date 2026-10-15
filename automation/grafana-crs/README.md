@@ -20,6 +20,7 @@ A Helm chart for Kubernetes
 | grafana.ingressClass | string | `"nginx"` |  |
 | grafana.keycloakConfig.enabled | bool | `false` |  |
 | grafana.logMode | string | `"console"` |  |
+| grafana.loginFormDisabled | bool | `false` |  |
 | grafana.oauthEnvs | list | `[]` |  |
 | grafana.storageSize | string | `"10Gi"` |  |
 | muteTimings | list | `[]` |  |
