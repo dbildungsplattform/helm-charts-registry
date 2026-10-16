@@ -1,0 +1,39 @@
+replicaCount: 1
+
+image:
+  repository: alpine/socat
+  tag: 1.7.4.4
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+podAnnotations: {}
+
+tunnel:
+  host: myhost
+  port: 9999
+  localPort: null
+
+securityContext:
+  capabilities:
+    drop:
+    - ALL
+  runAsUser: 1000
+  runAsGroup: 1000
+  runAsNonRoot: true
+  readOnlyRootFilesystem: false
+  allowPrivilegeEscalation: false
+  seccompProfile:
+    type: RuntimeDefault
