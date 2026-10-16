@@ -12303,6 +12303,16 @@ entries:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-keycloak-16.16.1/dbildungs-iam-keycloak-16.16.1.tgz
     version: 16.16.1
   - apiVersion: v2
+    appVersion: 1.30.1
+    created: "2026-10-16T05:55:38.361166256Z"
+    description: A Helm Chart for the dbildungs-iam-keycloak
+    digest: b202391051274f0933f22207e3306e88c7fb8d44d9fa862f86dc589bcd31ed53
+    name: dbildungs-iam-keycloak
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-keycloak-1.30.1/dbildungs-iam-keycloak-1.30.1.tgz
+    version: 1.30.1
+  - apiVersion: v2
     appVersion: 1.30.0
     created: "2026-10-15T07:25:28.725705313Z"
     description: A Helm Chart for the dbildungs-iam-keycloak
@@ -26620,6 +26630,16 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-server-16.16.1/dbildungs-iam-server-16.16.1.tgz
     version: 16.16.1
+  - apiVersion: v2
+    appVersion: 1.30.1
+    created: "2026-10-16T05:55:38.558863198Z"
+    description: dBildungs-IAM-server
+    digest: 8f69d0f4c0cc5e7a5227f332e711813aab1d29f0c3ca5bf8259d78b335533462
+    name: dbildungs-iam-server
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-server-1.30.1/dbildungs-iam-server-1.30.1.tgz
+    version: 1.30.1
   - apiVersion: v2
     appVersion: 1.30.0
     created: "2026-10-15T07:22:12.906261144Z"
@@ -281346,4 +281366,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-10-16T05:51:42.188765585Z"
+generated: "2026-10-16T05:55:38.630181846Z"
