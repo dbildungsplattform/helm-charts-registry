@@ -273119,6 +273119,20 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/schulportal-client-0.0.0-dbp-000-20240418-2037/schulportal-client-0.0.0-dbp-000-20240418-2037.tgz
     version: 0.0.0-dbp-000-20240418-2037
+  socat-tunneller:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2026-10-16T12:38:53.455865494Z"
+    description: A Helm chart for socat-tunneller
+    digest: d26dc77b39fb3ffaa5452562be9a5c8d2718f297768825e54af2fc0706f60145
+    home: http://www.dest-unreach.org/socat/
+    maintainers:
+    - email: andrew.plummer@isotoma.com
+      name: plumdog
+    name: socat-tunneller
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/socat-tunneller-0.0.0-dbp-2558-20261016-1235/socat-tunneller-0.0.0-dbp-2558-20261016-1235.tgz
+    version: 0.0.0-dbp-2558-20261016-1235
   spsh-client:
   - apiVersion: v2
     created: "2023-11-03T11:52:16.041744752Z"
@@ -281526,4 +281540,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-10-16T11:38:55.49384494Z"
+generated: "2026-10-16T12:38:53.511042104Z"
