@@ -1,6 +1,6 @@
 apiVersion: v2
-appVersion: spsh-4394
+appVersion: spsh-2230
 description: dBildungs-IAM-server
 name: dbildungs-iam-server
 type: application
-version: 0.0.0-spsh-4394-20261020-1245
+version: 0.0.0-spsh-2230-20261020-1323
