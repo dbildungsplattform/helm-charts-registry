@@ -24,8 +24,8 @@ spec:
 {{- end }}
     spec:
       containers:
-        {{- range $tunnel := required "Must specify at least one tunnel." .Values.tunnels }}
-        - name: {{ $.Chart.Name }}-{{ $tunnel.host | lower | replace "." "-" }}-{{ $tunnel.port }}
+        {{- range $index, $tunnel := required "Must specify at least one tunnel." .Values.tunnels }}
+        - name: {{ $.Chart.Name }}-{{ $index }}
           image: "{{ $.Values.image.repository }}:{{ $.Values.image.tag }}"
           imagePullPolicy: {{ $.Values.image.pullPolicy }}
           {{- with $.Values.securityContext }}
