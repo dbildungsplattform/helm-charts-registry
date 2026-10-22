@@ -15684,6 +15684,16 @@ entries:
     version: 0.0.0-spsh-4477-20261005-0750
   - apiVersion: v2
     appVersion: spsh-4307
+    created: "2026-10-22T10:05:36.137753698Z"
+    description: A Helm Chart for the dbildungs-iam-keycloak
+    digest: ea97bc6348d177b37af16b7a6380dfc2446f722352225775e5919be39afb1088
+    name: dbildungs-iam-keycloak
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-keycloak-0.0.0-spsh-4307-20261022-1001/dbildungs-iam-keycloak-0.0.0-spsh-4307-20261022-1001.tgz
+    version: 0.0.0-spsh-4307-20261022-1001
+  - apiVersion: v2
+    appVersion: spsh-4307
     created: "2026-10-22T09:52:02.198561816Z"
     description: A Helm Chart for the dbildungs-iam-keycloak
     digest: abd4f1cf7ef445f4d708365b4bfbe6a74bd7a57d95717c84e1e69d55ea40ed11
@@ -275901,6 +275911,19 @@ entries:
     version: 0.0.1
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2026-10-22T10:05:36.414209206Z"
+    description: A Helm chart for socat-tunneller
+    digest: f650f808e4da4676cb46a16fd18064412d3bb313d78b008fc6e0966132ff20f8
+    home: http://www.dest-unreach.org/socat/
+    maintainers:
+    - email: andrew.plummer@isotoma.com
+      name: plumdog
+    name: socat-tunneller
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/socat-tunneller-0.0.0-dbp-2558-20261022-1002/socat-tunneller-0.0.0-dbp-2558-20261022-1002.tgz
+    version: 0.0.0-dbp-2558-20261022-1002
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2026-10-22T09:49:58.128296114Z"
     description: A Helm chart for socat-tunneller
     digest: 856fcf64eca9be1da0a8c580caa7e894c1d6025c921c6c1fab6eb418db67024f
@@ -284358,4 +284381,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-10-22T10:02:11.461761675Z"
+generated: "2026-10-22T10:05:36.473404211Z"
