@@ -1,6 +1,6 @@
 apiVersion: v2
-appVersion: spsh-4323
+appVersion: spsh-4474
 description: Helm-Chart for schulportal-client
 name: schulportal-client
 type: application
-version: 0.0.0-spsh-4323-20261022-0721
+version: 0.0.0-spsh-4474-20261022-0834
