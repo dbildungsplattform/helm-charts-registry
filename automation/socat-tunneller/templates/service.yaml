@@ -14,7 +14,6 @@ spec:
     - port: {{ include "tunneller.localPort" $tunnel }}
       targetPort: {{ include "tunneller.localPort" $tunnel }}
       protocol: TCP
-      name: tunnel-port-{{ include "tunneller.localPort" $tunnel }}
     {{- end }}
   selector:
     app.kubernetes.io/name: {{ include "tunneller.name" . }}

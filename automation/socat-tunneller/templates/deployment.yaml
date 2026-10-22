@@ -45,8 +45,7 @@ spec:
             - name: TUNNEL_PORT
               value: {{ required "Must specify a target port for the tunnel." $tunnel.port | quote }}
           ports:
-            - name: tunnel-port
-              containerPort: {{ include "tunneller.localPort" $tunnel }}
+            - containerPort: {{ include "tunneller.localPort" $tunnel }}
               protocol: TCP
           resources:
 {{ toYaml $.Values.resources | indent 12 }}
