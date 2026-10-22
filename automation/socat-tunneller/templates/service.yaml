@@ -10,10 +10,12 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ include "tunneller.localPort" . }}
-      targetPort: tunnel-port
+    {{- range $tunnel := .Values.tunnels }}
+    - port: {{ include "tunneller.localPort" $tunnel }}
+      targetPort: tunnel-port-{{ include "tunneller.localPort" $tunnel }}
       protocol: TCP
-      name: tunnel-port
+      name: tunnel-port-{{ include "tunneller.localPort" $tunnel }}
+    {{- end }}
   selector:
     app.kubernetes.io/name: {{ include "tunneller.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}

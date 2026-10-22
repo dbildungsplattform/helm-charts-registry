@@ -6,4 +6,4 @@ maintainers:
 - email: andrew.plummer@isotoma.com
   name: plumdog
 name: socat-tunneller
-version: 0.0.1
+version: 0.0.0-dbp-2558-20261022-0930

@@ -32,12 +32,13 @@ Create chart name and version as used by the chart label.
 {{- end -}}
 
 {{/*
-Define local port to bind.
+Define local port to bind for a single tunnel entry.
+Pass the tunnel entry (map with host/port/localPort) as the argument.
 */}}
 {{- define "tunneller.localPort" -}}
-{{- if .Values.tunnel.localPort -}}
-{{- .Values.tunnel.localPort -}}
+{{- if .localPort -}}
+{{- .localPort -}}
 {{- else -}}
-{{- .Values.tunnel.port -}}
+{{- .port -}}
 {{- end -}}
 {{- end -}}

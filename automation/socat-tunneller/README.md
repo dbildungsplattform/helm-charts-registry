@@ -15,7 +15,7 @@ giving them permission to run `port-forward` on the tunneller.
 ## Basic usage
 
 ```
-helm install isotoma/socat-tunneller --name db-tunneller --set tunnel.host=mydbhost.cloud --set tunnel.port=3306 --set nameOverride=db-tunneller
+helm install isotoma/socat-tunneller --name db-tunneller --set 'tunnels[0].host=mydbhost.cloud' --set 'tunnels[0].port=3306' --set nameOverride=db-tunneller
 ```
 then
 ```

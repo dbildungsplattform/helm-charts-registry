@@ -21,10 +21,13 @@ affinity: {}
 
 podAnnotations: {}
 
-tunnel:
-  host: myhost
-  port: 9999
-  localPort: null
+tunnels:
+  - host: myhost1
+    port: 9998
+    localPort: null
+  - host: myhost2
+    port: 9999
+    localPort: null
 
 securityContext:
   capabilities:

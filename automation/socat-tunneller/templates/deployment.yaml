@@ -24,10 +24,11 @@ spec:
 {{- end }}
     spec:
       containers:
-        - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
-          {{- with .Values.securityContext }}
+        {{- range $tunnel := required "Must specify at least one tunnel." .Values.tunnels }}
+        - name: {{ $.Chart.Name }}-{{ $tunnel.host | lower | replace "." "-" }}-{{ $tunnel.port }}
+          image: "{{ $.Values.image.repository }}:{{ $.Values.image.tag }}"
+          imagePullPolicy: {{ $.Values.image.pullPolicy }}
+          {{- with $.Values.securityContext }}
           securityContext:
             {{- toYaml . | nindent 12 }}
           {{- end }}
@@ -38,17 +39,18 @@ spec:
             - "TCP:$(TUNNEL_HOST):$(TUNNEL_PORT)"
           env:
             - name: TUNNEL_LOCAL_PORT
-              value: {{ include "tunneller.localPort" . | quote }}
+              value: {{ include "tunneller.localPort" $tunnel | quote }}
             - name: TUNNEL_HOST
-              value: {{ required "Must specify a target host for the tunnel." .Values.tunnel.host | quote }}
+              value: {{ required "Must specify a target host for the tunnel." $tunnel.host | quote }}
             - name: TUNNEL_PORT
-              value: {{ required "Must specify a target port for the tunnel." .Values.tunnel.port | quote }}
+              value: {{ required "Must specify a target port for the tunnel." $tunnel.port | quote }}
           ports:
             - name: tunnel-port
-              containerPort: {{ include "tunneller.localPort" . }}
+              containerPort: {{ include "tunneller.localPort" $tunnel }}
               protocol: TCP
           resources:
-{{ toYaml .Values.resources | indent 12 }}
+ {{ toYaml $.Values.resources | indent 12 }}
+        {{- end }}
     {{- with .Values.nodeSelector }}
       nodeSelector:
 {{ toYaml . | indent 8 }}

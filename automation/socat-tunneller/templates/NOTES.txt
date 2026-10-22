@@ -1,1 +1,3 @@
-Connect to the target by using kubectl port-forward to forward one of your local ports to a tunneller pod's port {{ include "tunneller.localPort" . }}, or to the service using svc/{{ include "tunneller.fullname" . }}.
+{{- range $tunnel := .Values.tunnels }}
+Connect to the target ({{ $tunnel.host }}:{{ $tunnel.port }}) by using kubectl port-forward to forward one of your local ports to a tunneller pod's port {{ include "tunneller.localPort" $tunnel }}, or to the service using svc/{{ include "tunneller.fullname" $ }}.
+{{- end }}
