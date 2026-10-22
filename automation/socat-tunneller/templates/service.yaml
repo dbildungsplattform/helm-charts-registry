@@ -12,7 +12,7 @@ spec:
   ports:
     {{- range $tunnel := .Values.tunnels }}
     - port: {{ include "tunneller.localPort" $tunnel }}
-      targetPort: tunnel-port-{{ include "tunneller.localPort" $tunnel }}
+      targetPort: {{ include "tunneller.localPort" $tunnel }}
       protocol: TCP
       name: tunnel-port-{{ include "tunneller.localPort" $tunnel }}
     {{- end }}
