@@ -15683,6 +15683,16 @@ entries:
     - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-keycloak-0.0.0-spsh-4477-20261005-0750/dbildungs-iam-keycloak-0.0.0-spsh-4477-20261005-0750.tgz
     version: 0.0.0-spsh-4477-20261005-0750
   - apiVersion: v2
+    appVersion: spsh-4307
+    created: "2026-10-22T09:52:02.198561816Z"
+    description: A Helm Chart for the dbildungs-iam-keycloak
+    digest: abd4f1cf7ef445f4d708365b4bfbe6a74bd7a57d95717c84e1e69d55ea40ed11
+    name: dbildungs-iam-keycloak
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-keycloak-0.0.0-spsh-4307-20261022-0947/dbildungs-iam-keycloak-0.0.0-spsh-4307-20261022-0947.tgz
+    version: 0.0.0-spsh-4307-20261022-0947
+  - apiVersion: v2
     appVersion: spsh-4212
     created: "2026-09-09T10:18:36.824768087Z"
     description: A Helm Chart for the dbildungs-iam-keycloak
@@ -275855,6 +275865,19 @@ entries:
   socat-tunneller:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2026-10-22T09:52:02.391334486Z"
+    description: A Helm chart for socat-tunneller
+    digest: 74587f163d31cb5300f252e8b06deaf0009b66dbcd2e3efa83377053354e0abc
+    home: http://www.dest-unreach.org/socat/
+    maintainers:
+    - email: andrew.plummer@isotoma.com
+      name: plumdog
+    name: socat-tunneller
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/socat-tunneller-0.0.2/socat-tunneller-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2026-10-16T12:42:05.887941277Z"
     description: A Helm chart for socat-tunneller
     digest: c114a7ae42cc3c5430c9a07c86eca75e21c1e778fc6cde71bdcff9bae3b19d78
@@ -284325,4 +284348,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-10-22T09:49:58.188390235Z"
+generated: "2026-10-22T09:52:02.423618735Z"
