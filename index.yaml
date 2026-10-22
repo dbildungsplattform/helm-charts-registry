@@ -275868,6 +275868,19 @@ entries:
     version: 0.0.1
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2026-10-22T09:49:58.128296114Z"
+    description: A Helm chart for socat-tunneller
+    digest: 856fcf64eca9be1da0a8c580caa7e894c1d6025c921c6c1fab6eb418db67024f
+    home: http://www.dest-unreach.org/socat/
+    maintainers:
+    - email: andrew.plummer@isotoma.com
+      name: plumdog
+    name: socat-tunneller
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/socat-tunneller-0.0.0-dbp-2558-20261022-0946/socat-tunneller-0.0.0-dbp-2558-20261022-0946.tgz
+    version: 0.0.0-dbp-2558-20261022-0946
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2026-10-22T09:46:17.300252969Z"
     description: A Helm chart for socat-tunneller
     digest: 4e7c7367ef614b3ee86e20c04e0364813a255efde2113feec963894f84a92803
@@ -284312,4 +284325,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-10-22T09:46:17.33400836Z"
+generated: "2026-10-22T09:49:58.188390235Z"
