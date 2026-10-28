@@ -27930,6 +27930,16 @@ entries:
     - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-server-0.0.1-20261028-1402/dbildungs-iam-server-0.0.1-20261028-1402.tgz
     version: 0.0.1-20261028-1402
   - apiVersion: v2
+    appVersion: sha-2da4fba
+    created: "2026-10-28T14:09:08.934219434Z"
+    description: dBildungs-IAM-server
+    digest: 9496f13804244f2b111874268e6467db6073f9ea29bfcc7d24da448be69d8099
+    name: dbildungs-iam-server
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-server-0.0.1-20261028-1402/dbildungs-iam-server-0.0.1-20261028-1402.tgz
+    version: 0.0.1-20261028-1402
+  - apiVersion: v2
     appVersion: sha-cb240b1
     created: "2026-10-27T13:40:59.968992333Z"
     description: dBildungs-IAM-server
@@ -217727,6 +217737,16 @@ entries:
     - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/schulportal-client-0.0.1-20261028-1402/schulportal-client-0.0.1-20261028-1402.tgz
     version: 0.0.1-20261028-1402
   - apiVersion: v2
+    appVersion: sha-706f434
+    created: "2026-10-28T14:09:09.206254757Z"
+    description: Helm-Chart for schulportal-client
+    digest: 334a79466997bc06a1e549d61ddfc78ff70c8bbe8d37d8c09583638b5238aabb
+    name: schulportal-client
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/schulportal-client-0.0.1-20261028-1402/schulportal-client-0.0.1-20261028-1402.tgz
+    version: 0.0.1-20261028-1402
+  - apiVersion: v2
     appVersion: sha-077c5d1
     created: "2026-10-27T07:47:18.425881751Z"
     description: Helm-Chart for schulportal-client
@@ -285905,4 +285925,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-10-28T14:05:44.455519992Z"
+generated: "2026-10-28T14:09:09.294039562Z"
