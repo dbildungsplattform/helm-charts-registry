@@ -110,6 +110,10 @@
         "SSL_CERT_PATH": "/tls/client-cert.pem",
         "SSL_KEY_PATH": "/tls/client-key.pem"
     },
+    "EVENT_OUTBOX": {
+        "POLL_INTERVAL_MS": 1000,
+        "BATCH_SIZE": 50
+    },
     "PORTAL": {
         "LIMITED_ROLLENART_ALLOWLIST": ["LERN"]
     },
@@ -118,9 +122,6 @@
         "ENDPOINT": "http://dbildungs-iam-server-email-backend:80/"
     },
     "SCHULCONNEX": {
-        "LIMIT_PERSONENINFO": 2500,
-        "PUSH_MAX_ATTEMPTS": 5,
-        "PUSH_RETRY_DELAY_MS": 15000,
-        "PUSH_REQUEST_TIMEOUT_MS": 30000
+        "LIMIT_PERSONENINFO": 2500
     }
 }
