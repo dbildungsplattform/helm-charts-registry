@@ -3,4 +3,4 @@ appVersion: review-41126
 description: Helm-Chart for schulportal-client
 name: schulportal-client
 type: application
-version: 0.0.0-review-41126-20261103-1253
+version: 0.0.0-review-41126-20261103-1315
