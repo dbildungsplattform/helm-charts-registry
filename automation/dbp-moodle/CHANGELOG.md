@@ -1,4 +1,9 @@
 # Changelog
+## [1.12.0]
+### Changes
+- **DBP-2601** Remove apache-exporter
+  - Remove the apache-exporter and the `moodle.metrics` block within the helm values. 
+
 ## [1.11.1] - 2026-11-03
 ### Changes
 - **DBP-2617** Bump Etherpad
