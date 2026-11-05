@@ -19853,6 +19853,16 @@ entries:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-keycloak-0.0.0-dbp-453-20240412-1441/dbildungs-iam-keycloak-0.0.0-dbp-453-20240412-1441.tgz
     version: 0.0.0-dbp-453-20240412-1441
   - apiVersion: v2
+    appVersion: dbp-2639
+    created: "2026-11-05T11:54:55.682518594Z"
+    description: A Helm Chart for the dbildungs-iam-keycloak
+    digest: aebd66d65dea00790938b98b0c6fab6c97fb168d549749a2a1302db78cd5d70c
+    name: dbildungs-iam-keycloak
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-keycloak-0.0.0-dbp-2639-20261105-1151/dbildungs-iam-keycloak-0.0.0-dbp-2639-20261105-1151.tgz
+    version: 0.0.0-dbp-2639-20261105-1151
+  - apiVersion: v2
     appVersion: dbp-2418
     created: "2026-08-03T17:15:00.432536375Z"
     description: A Helm Chart for the dbildungs-iam-keycloak
@@ -121474,6 +121484,16 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-server-0.0.0-dbp-453-20240422-0951/dbildungs-iam-server-0.0.0-dbp-453-20240422-0951.tgz
     version: 0.0.0-dbp-453-20240422-0951
+  - apiVersion: v2
+    appVersion: dbp-2639
+    created: "2026-11-05T11:54:55.829104517Z"
+    description: dBildungs-IAM-server
+    digest: 1b9df9681825683e4809927e4e295111046fc22f2d3a6a1533ae22a8ceeb7d31
+    name: dbildungs-iam-server
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-server-0.0.0-dbp-2639-20261105-1151/dbildungs-iam-server-0.0.0-dbp-2639-20261105-1151.tgz
+    version: 0.0.0-dbp-2639-20261105-1151
   - apiVersion: v2
     appVersion: dbp-2553
     created: "2026-09-25T09:53:35.665042376Z"
@@ -287801,4 +287821,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-11-05T10:13:26.667228291Z"
+generated: "2026-11-05T11:54:55.878646971Z"
