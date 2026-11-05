@@ -188,6 +188,10 @@ backend:
   dbmigration:
     enabled: true
     command: ["node", "dist/src/console/main.js", "db", "migration-apply"]
+  keycloakdatamigration:
+    enabled: true
+    command:
+      ["node", "dist/src/console/main.js", "keycloak", "update-clients", "dev"]
   ingress:
     enabled: true
     healthenabled: true
