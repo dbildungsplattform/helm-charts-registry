@@ -3,4 +3,4 @@ appVersion: dbp-2639
 description: Helm-Chart for schulportal-client
 name: schulportal-client
 type: application
-version: 0.0.0-dbp-2639-20261105-1207
+version: 0.0.0-dbp-2639-20261105-1232
