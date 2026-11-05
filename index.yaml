@@ -58501,6 +58501,16 @@ entries:
     version: 0.0.0-spsh-4592-20261105-1454
   - apiVersion: v2
     appVersion: spsh-4592
+    created: "2026-11-05T15:01:24.153641082Z"
+    description: dBildungs-IAM-server
+    digest: 1e42450616de8098dd2b23b7411ba0f521a651e854d8a4ff823a20b5a8106d25
+    name: dbildungs-iam-server
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-server-0.0.0-spsh-4592-20261105-1454/dbildungs-iam-server-0.0.0-spsh-4592-20261105-1454.tgz
+    version: 0.0.0-spsh-4592-20261105-1454
+  - apiVersion: v2
+    appVersion: spsh-4592
     created: "2026-11-05T13:55:36.395592577Z"
     description: dBildungs-IAM-server
     digest: 701214a2c08c18c0d99863e86edbaa55f5d26b4469d24c7268a52ad665fb8816
@@ -148090,6 +148100,65 @@ entries:
       The Chart can be deployed without any modification but it is advised to set
       own secrets acccording to this readme. '
     digest: b82403d22f4ba4b3213273ca9a4b04af6ff83c8acbe2cd2265052f787e387fdf
+    home: https://dbildungsplattform.github.io/dbp-moodle/
+    name: dbp-moodle
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbp-moodle-0.0.0-dbp-2594-20261105-1437/dbp-moodle-0.0.0-dbp-2594-20261105-1437.tgz
+    version: 0.0.0-dbp-2594-20261105-1437
+  - apiVersion: v2
+    appVersion: DBP-2594
+    created: "2026-11-05T15:01:24.514238083Z"
+    dependencies:
+    - name: moodle
+      repository: file://charts/moodle
+      version: 27.0.5
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 19.5.3
+    - condition: valkey.enabled
+      name: valkey
+      repository: https://dbildungsplattform.github.io/helm-charts-registry/
+      version: 3.0.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.5.38
+    - alias: moodlecronjob
+      name: cronjob
+      repository: file://charts/cronjob
+      version: 0.1.0
+    - alias: backup-cronjob
+      condition: dbpMoodle.backup.enabled
+      name: cronjob
+      repository: file://charts/cronjob
+      version: 0.1.0
+    - alias: etherpad-postgresql
+      condition: etherpad-postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.5.38
+    - alias: etherpadlite
+      condition: etherpadlite.enabled
+      name: etherpad
+      repository: file://charts/etherpad
+      version: 0.1.0
+    - alias: clamav
+      condition: clamav.enabled
+      name: clamav
+      repository: https://wiremind.github.io/wiremind-helm-charts
+      version: 3.7.3
+    - condition: sql-exporter.enabled
+      name: sql-exporter
+      repository: https://burningalchemist.github.io/sql_exporter/
+      version: 0.18.10
+    description: 'This is a Helm Chart bundling some of the bitnami resources to deploy
+      Moodle for DBildungsplattform. Extending them with features such as  PostgreSQL
+      support, Horizontal Autoscaling capabilities, Redis Session Store, Etherpad-Lite.
+      The Chart can be deployed without any modification but it is advised to set
+      own secrets acccording to this readme. '
+    digest: c1c2b632f68b55a4595c9f654e27c9d1623ed7a33bc4e7f00b68def3d17841b1
     home: https://dbildungsplattform.github.io/dbp-moodle/
     name: dbp-moodle
     type: application
@@ -288079,4 +288148,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-11-05T14:58:08.909019084Z"
+generated: "2026-11-05T15:01:24.572294826Z"
