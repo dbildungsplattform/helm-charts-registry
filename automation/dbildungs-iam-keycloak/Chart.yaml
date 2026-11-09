@@ -1,6 +1,6 @@
 apiVersion: v2
-appVersion: spsh-4610
+appVersion: sha-b8b2138
 description: A Helm Chart for the dbildungs-iam-keycloak
 name: dbildungs-iam-keycloak
 type: application
-version: 0.0.0-spsh-4610-20261105-1321
+version: 0.0.1-20261109-1430
