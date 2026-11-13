@@ -1,6 +1,6 @@
 # dbp-moodle
 
-![Version: 1.12.0](https://img.shields.io/badge/Version-1.12.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.5.15](https://img.shields.io/badge/AppVersion-4.5.15-informational?style=flat-square)
+![Version: 1.11.1](https://img.shields.io/badge/Version-1.11.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.5.15](https://img.shields.io/badge/AppVersion-4.5.15-informational?style=flat-square)
 
 This is a Helm Chart bundling some of the bitnami resources to deploy Moodle for DBildungsplattform. Extending them with features such as
 PostgreSQL support, Horizontal Autoscaling capabilities, Redis Session Store, Etherpad-Lite.
@@ -282,7 +282,7 @@ The Chart can be deployed without any modification but it is advised to set own 
 | etherpadlite.volumes[1].name | string | `"etherpad-settings"` |  |
 | extraObjects | list | `[]` | List of arbitrary Kubernetes objects to deploy alongside the release. -- Each entry is a full manifest which requires apiVersion, kind and metadata.name. -- namespace defaults to the release namespace unless set in metadata. -- For cluster-scoped resources set namespace to "". -- Default labels (app.kubernetes.io/..., helm.sh/chart) are added, user labels take precedence. |
 | global.kubectl_version | string | `"1.28.7"` |  |
-| global.moodlePlugins | object | `{"adaptable":{"enabled":false},"availability_cohort":{"enabled":false},"block_stash":{"enabled":false},"board":{"enabled":false},"booking":{"enabled":false},"certificate":{"enabled":false},"choicegroup":{"enabled":false},"completion_progress":{"enabled":false},"coursearchiver":{"enabled":false},"coursecertificate":{"enabled":false},"customfield_dynamic":{"enabled":false},"customfield_dynamicformat":{"enabled":false},"dash":{"enabled":false},"dynamic_cohorts":{"enabled":false},"eledia_oidc":{"enabled":false},"etherpadlite":{"enabled":false},"filtercodes":{"enabled":false},"flexsections":{"enabled":false},"geogebra":{"enabled":false},"groupselect":{"enabled":false},"heartbeat":{"enabled":false},"hvp":{"enabled":false},"jitsi":{"enabled":false},"local_course_reminder":{"enabled":false},"mod_checklist":{"enabled":false},"mod_subcourse":{"enabled":false},"mod_videotime":{"enabled":false},"multitopic":{"enabled":false},"oidc":{"enabled":false},"pdfannotator":{"enabled":false},"qtype_stack":{"enabled":false},"reengagement":{"enabled":false},"remuiformat":{"enabled":false},"saml2":{"enabled":false},"sharing_cart":{"enabled":false},"shortcodes":{"enabled":false},"skype":{"enabled":false},"snap":{"enabled":false},"staticpage":{"enabled":false},"tiles":{"enabled":false},"tool_inactive_user_cleanup":{"enabled":false},"tool_mediatime":{"enabled":false},"topcoll":{"enabled":false},"unilabel":{"enabled":false},"usersuspension":{"enabled":false},"xp":{"enabled":false},"zoom":{"enabled":false}}` | All plugins are disabled by default. if enabled, the plugin is installed on image startup |
+| global.moodlePlugins | object | `{"adaptable":{"enabled":false},"availability_cohort":{"enabled":false},"block_stash":{"enabled":false},"board":{"enabled":false},"booking":{"enabled":false},"certificate":{"enabled":false},"choicegroup":{"enabled":false},"completion_progress":{"enabled":false},"coursearchiver":{"enabled":false},"coursecertificate":{"enabled":false},"customfield_dynamic":{"enabled":false},"customfield_dynamicformat":{"enabled":false},"dash":{"enabled":false},"dynamic_cohorts":{"enabled":false},"eledia_oidc":{"enabled":false},"etherpadlite":{"enabled":false},"filtercodes":{"enabled":false},"flexsections":{"enabled":false},"geogebra":{"enabled":false},"groupselect":{"enabled":false},"heartbeat":{"enabled":false},"hvp":{"enabled":false},"jitsi":{"enabled":false},"local_course_reminder":{"enabled":false},"mod_checklist":{"enabled":false},"mod_subcourse":{"enabled":false},"mod_videotime":{"enabled":false},"multitopic":{"enabled":false},"oidc":{"enabled":false},"pdfannotator":{"enabled":false},"qtype_stack":{"enabled":false},"reengagement":{"enabled":false},"remuiformat":{"enabled":false},"saml2":{"enabled":false},"sharing_cart":{"enabled":false},"shortcodes":{"enabled":false},"skype":{"enabled":false},"snap":{"enabled":false},"staticpage":{"enabled":false},"tiles":{"enabled":false},"tool_mediatime":{"enabled":false},"topcoll":{"enabled":false},"unilabel":{"enabled":false},"usersuspension":{"enabled":false},"xp":{"enabled":false},"zoom":{"enabled":false}}` | All plugins are disabled by default. if enabled, the plugin is installed on image startup |
 | global.security.allowInsecureImages | bool | `true` |  |
 | global.storageClass | string | `"nfs-client"` | Default storage class, should support ReadWriteMany |
 | moodle.affinity | object | `{}` |  |
@@ -326,7 +326,7 @@ The Chart can be deployed without any modification but it is advised to set own 
 | moodle.image.pullPolicy | string | `"Always"` |  |
 | moodle.image.registry | string | `"ghcr.io"` |  |
 | moodle.image.repository | string | `"dbildungsplattform/moodle"` |  |
-| moodle.image.tag | string | `"4.5.15-fpm-trixie-8.2.35-dbp2"` | The dbp-moodle image which is build for this helm chart |
+| moodle.image.tag | string | `"4.5.15-fpm-trixie-8.2.35-dbp1"` | The dbp-moodle image which is build for this helm chart |
 | moodle.ingress.annotations."cert-manager.io/cluster-issuer" | string | `"sc-cert-manager-clusterissuer-letsencrypt"` |  |
 | moodle.ingress.annotations."nginx.ingress.kubernetes.io/proxy-body-size" | string | `"200M"` |  |
 | moodle.ingress.annotations."nginx.ingress.kubernetes.io/proxy-connect-timeout" | string | `"30s"` |  |
@@ -337,6 +337,11 @@ The Chart can be deployed without any modification but it is advised to set own 
 | moodle.ingress.extraHosts | list | `[]` | Any additional hostnames, needs to be "name: URL" value pairs |
 | moodle.ingress.hostname | string | `"example.de"` | The hostname of the moodle application |
 | moodle.ingress.tls | bool | `true` |  |
+| moodle.metrics.enabled | bool | `true` |  |
+| moodle.metrics.image.repository | string | `"lusotycoon/apache-exporter"` |  |
+| moodle.metrics.image.tag | string | `"v1.1.1"` |  |
+| moodle.metrics.resources | object | `{"limits":{"cpu":"200m","memory":"256Mi"},"requests":{"cpu":"10m","memory":"16Mi"}}` | Resources have to be set so that the horizontal pod autoscaler for moodle can read the moodle cpu consumption correctly |
+| moodle.metrics.service.type | string | `"ClusterIP"` |  |
 | moodle.moodleEmail | string | `""` |  |
 | moodle.moodleLang | string | `"de"` |  |
 | moodle.moodleSiteName | string | `"Moodle"` |  |
