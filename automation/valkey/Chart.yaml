@@ -10,4 +10,4 @@ maintainers:
   url: https://github.com/groundhog2k/helm-charts
 name: valkey
 type: application
-version: 3.0.1
+version: 0.0.0-ops-10896-20261113-1556
