@@ -63691,6 +63691,16 @@ entries:
     version: 0.0.0-spsh-4227-20260904-0908
   - apiVersion: v2
     appVersion: spsh-4226
+    created: "2026-11-16T12:28:24.402011874Z"
+    description: dBildungs-IAM-server
+    digest: 9cd49802ab9444d1a9a8a06a61e675e2cf79cb717fe139721c244fdcb669894a
+    name: dbildungs-iam-server
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-server-0.0.0-spsh-4226-20261116-1156/dbildungs-iam-server-0.0.0-spsh-4226-20261116-1156.tgz
+    version: 0.0.0-spsh-4226-20261116-1156
+  - apiVersion: v2
+    appVersion: spsh-4226
     created: "2026-11-13T08:43:01.579849179Z"
     description: dBildungs-IAM-server
     digest: 05b6799e8eaa64f35e3e8d381399cbc14a8c841a4727b9aa9a4028fab539f700
@@ -141754,6 +141764,65 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/dbp-moodle-0.0.0-ops-10910-20260528-0849/dbp-moodle-0.0.0-ops-10910-20260528-0849.tgz
     version: 0.0.0-ops-10910-20260528-0849
+  - apiVersion: v2
+    appVersion: OPS-10896
+    created: "2026-11-16T12:28:24.643857524Z"
+    dependencies:
+    - name: moodle
+      repository: file://charts/moodle
+      version: 27.0.5
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 19.5.3
+    - condition: valkey.enabled
+      name: valkey
+      repository: https://dbildungsplattform.github.io/helm-charts-registry/
+      version: 3.0.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.5.38
+    - alias: moodlecronjob
+      name: cronjob
+      repository: file://charts/cronjob
+      version: 0.1.0
+    - alias: backup-cronjob
+      condition: dbpMoodle.backup.enabled
+      name: cronjob
+      repository: file://charts/cronjob
+      version: 0.1.0
+    - alias: etherpad-postgresql
+      condition: etherpad-postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.5.38
+    - alias: etherpadlite
+      condition: etherpadlite.enabled
+      name: etherpad
+      repository: file://charts/etherpad
+      version: 0.1.0
+    - alias: clamav
+      condition: clamav.enabled
+      name: clamav
+      repository: https://wiremind.github.io/wiremind-helm-charts
+      version: 3.7.3
+    - condition: sql-exporter.enabled
+      name: sql-exporter
+      repository: https://burningalchemist.github.io/sql_exporter/
+      version: 0.18.10
+    description: 'This is a Helm Chart bundling some of the bitnami resources to deploy
+      Moodle for DBildungsplattform. Extending them with features such as  PostgreSQL
+      support, Horizontal Autoscaling capabilities, Redis Session Store, Etherpad-Lite.
+      The Chart can be deployed without any modification but it is advised to set
+      own secrets acccording to this readme. '
+    digest: 6f1cdf9feeed623180667426867989583bdad4ea8a5a226bef0e34ed850f3124
+    home: https://dbildungsplattform.github.io/dbp-moodle/
+    name: dbp-moodle
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbp-moodle-0.0.0-ops-10896-20261113-1555/dbp-moodle-0.0.0-ops-10896-20261113-1555.tgz
+    version: 0.0.0-ops-10896-20261113-1555
   - apiVersion: v2
     appVersion: OPS-10876
     created: "2026-05-08T09:36:54.128310822Z"
@@ -257723,6 +257792,16 @@ entries:
     version: 0.0.0-spsh-2336-20250702-0801
   - apiVersion: v2
     appVersion: spsh-2335
+    created: "2026-11-16T12:28:24.836427679Z"
+    description: Helm-Chart for schulportal-client
+    digest: ecec733fa9ce1c8f786e888a75d5dc9413c4166b5f3ae5911281fab99a0d9fe9
+    name: schulportal-client
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/schulportal-client-0.0.0-spsh-2335-20261116-1200/schulportal-client-0.0.0-spsh-2335-20261116-1200.tgz
+    version: 0.0.0-spsh-2335-20261116-1200
+  - apiVersion: v2
+    appVersion: spsh-2335
     created: "2026-11-13T12:39:35.101240695Z"
     description: Helm-Chart for schulportal-client
     digest: 5bb67242fd6c5977da724669c54d7ba8a4c135eebc08aadd7642015bea988e7a
@@ -289912,6 +289991,23 @@ entries:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/valkey-0.0.0-ops-11467-20260714-0931/valkey-0.0.0-ops-11467-20260714-0931.tgz
     version: 0.0.0-ops-11467-20260714-0931
   - apiVersion: v2
+    appVersion: 9.1.0
+    created: "2026-11-16T12:28:24.950445198Z"
+    description: A Helm chart for Valkey on Kubernetes
+    digest: 45e78a3f62c7cfeda1f1b7b0b3fb0fdfb3e52676bc4008ad25f6cde65dfea8ce
+    icon: https://valkey.io/img/Valkey-logo.svg
+    keywords:
+    - cache
+    - valkey
+    maintainers:
+    - name: groundhog2k
+      url: https://github.com/groundhog2k/helm-charts
+    name: valkey
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/valkey-0.0.0-ops-10896-20261113-1556/valkey-0.0.0-ops-10896-20261113-1556.tgz
+    version: 0.0.0-ops-10896-20261113-1556
+  - apiVersion: v2
     appVersion: 9.0.1
     created: "2026-01-27T16:01:28.88218248Z"
     description: A Helm chart for Valkey on Kubernetes
@@ -290463,4 +290559,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-11-13T14:22:19.019511237Z"
+generated: "2026-11-16T12:28:25.015980995Z"
