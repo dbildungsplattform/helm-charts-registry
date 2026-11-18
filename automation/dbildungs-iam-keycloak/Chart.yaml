@@ -1,6 +1,6 @@
 apiVersion: v2
-appVersion: sha-b8b2138
+appVersion: dbp-2650
 description: A Helm Chart for the dbildungs-iam-keycloak
 name: dbildungs-iam-keycloak
 type: application
-version: 0.0.1-20261109-1430
+version: 0.0.0-dbp-2650-20261118-0911
