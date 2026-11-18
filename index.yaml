@@ -12303,6 +12303,16 @@ entries:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-keycloak-16.16.1/dbildungs-iam-keycloak-16.16.1.tgz
     version: 16.16.1
   - apiVersion: v2
+    appVersion: 1.31.2
+    created: "2026-11-18T12:44:48.117980201Z"
+    description: A Helm Chart for the dbildungs-iam-keycloak
+    digest: f8453eba17911133efad0b19a007c4b0ecca4ac1329cbb6d1e1bf28a3f31c659
+    name: dbildungs-iam-keycloak
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-keycloak-1.31.2/dbildungs-iam-keycloak-1.31.2.tgz
+    version: 1.31.2
+  - apiVersion: v2
     appVersion: 1.31.1
     created: "2026-11-05T07:26:11.179091862Z"
     description: A Helm Chart for the dbildungs-iam-keycloak
@@ -26850,6 +26860,16 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-server-16.16.1/dbildungs-iam-server-16.16.1.tgz
     version: 16.16.1
+  - apiVersion: v2
+    appVersion: 1.31.2
+    created: "2026-11-18T12:44:48.303844192Z"
+    description: dBildungs-IAM-server
+    digest: 4d66635437253a6323cfecb6ab3549704c28267351b0e8db410ce128cbbbf92f
+    name: dbildungs-iam-server
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-server-1.31.2/dbildungs-iam-server-1.31.2.tgz
+    version: 1.31.2
   - apiVersion: v2
     appVersion: 1.31.1
     created: "2026-11-05T07:22:48.270286817Z"
@@ -220740,6 +220760,16 @@ entries:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/schulportal-client-16.16.1/schulportal-client-16.16.1.tgz
     version: 16.16.1
   - apiVersion: v2
+    appVersion: 1.31.2
+    created: "2026-11-18T12:44:48.488107069Z"
+    description: Helm-Chart for schulportal-client
+    digest: 3fc29438297e7f19653ec5b6265e411e83adb2fa0584e75a3219df3bcc0ecd52
+    name: schulportal-client
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/schulportal-client-1.31.2/schulportal-client-1.31.2.tgz
+    version: 1.31.2
+  - apiVersion: v2
     appVersion: 1.31.1
     created: "2026-11-05T07:22:48.562322522Z"
     description: Helm-Chart for schulportal-client
@@ -291628,4 +291658,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-11-18T12:41:17.798818587Z"
+generated: "2026-11-18T12:44:48.571700808Z"
