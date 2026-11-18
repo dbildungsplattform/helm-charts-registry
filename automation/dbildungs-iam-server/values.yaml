@@ -299,6 +299,11 @@ emailBackend:
 
 redis:
   host: dbildungs-iam-valkey-master.spsh.svc.cluster.local
+  sentinel:
+    enabled: true
+    masterName: "valkeyha"
+    nodes: [{"HOST":"dbildungs-iam-valkey.spsh.svc.cluster.local","PORT":26379}]
+    useTls: false
 
 kafka:
   enabled: true
