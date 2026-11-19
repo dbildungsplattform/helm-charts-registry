@@ -58380,6 +58380,16 @@ entries:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-server-0.0.0-spsh-472-20240312-0738/dbildungs-iam-server-0.0.0-spsh-472-20240312-0738.tgz
     version: 0.0.0-spsh-472-20240312-0738
   - apiVersion: v2
+    appVersion: spsh-4681
+    created: "2026-11-19T10:21:27.625125965Z"
+    description: dBildungs-IAM-server
+    digest: 4217f2738f9d8753b36aa6433b94b028c078ba15cec6659faf2addf456570eff
+    name: dbildungs-iam-server
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/dbildungs-iam-server-0.0.0-spsh-4681-20261119-1014/dbildungs-iam-server-0.0.0-spsh-4681-20261119-1014.tgz
+    version: 0.0.0-spsh-4681-20261119-1014
+  - apiVersion: v2
     appVersion: spsh-4664
     created: "2026-11-10T10:10:25.842423002Z"
     description: dBildungs-IAM-server
@@ -242261,6 +242271,16 @@ entries:
     version: 0.0.0-spsh-469-20240307-1224
   - apiVersion: v2
     appVersion: spsh-4681
+    created: "2026-11-19T10:21:27.895303973Z"
+    description: Helm-Chart for schulportal-client
+    digest: 7113e0816f5d30fb91eac5b34fa6c03e1a5a302d6cb20113e6556421b7e81561
+    name: schulportal-client
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/schulportal-client-0.0.0-spsh-4681-20261119-1016/schulportal-client-0.0.0-spsh-4681-20261119-1016.tgz
+    version: 0.0.0-spsh-4681-20261119-1016
+  - apiVersion: v2
+    appVersion: spsh-4681
     created: "2026-11-19T09:30:39.583212547Z"
     description: Helm-Chart for schulportal-client
     digest: 9b3a4202c998825ec8c08d4dde301d763436b27a86d3bdb60395c819f96f31bb
@@ -291978,4 +291998,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-11-19T10:17:11.947617469Z"
+generated: "2026-11-19T10:21:27.988907004Z"
