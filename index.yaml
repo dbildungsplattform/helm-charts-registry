@@ -220599,6 +220599,16 @@ entries:
     version: 0.0.0-dbp-1944-20260304-1545
   infra-autoscaler:
   - apiVersion: v2
+    appVersion: 2.1.0
+    created: "2026-11-24T14:35:27.26583256Z"
+    description: Deploy the dBildunsplattform infra-autoscaler
+    digest: 1a900f64532f8e02dc3b64d664509aac61a279fae60e8ca60b03412d27de8b6b
+    name: infra-autoscaler
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/infra-autoscaler-2.1.0/infra-autoscaler-2.1.0.tgz
+    version: 2.1.0
+  - apiVersion: v2
     appVersion: 2.0.0
     created: "2025-03-03T16:47:42.557590114Z"
     description: Deploy the dBildunsplattform infra-autoscaler
@@ -293684,4 +293694,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-11-24T14:13:19.107286178Z"
+generated: "2026-11-24T14:35:27.326104134Z"
