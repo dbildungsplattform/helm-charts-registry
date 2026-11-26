@@ -221293,6 +221293,17 @@ entries:
     version: 0.0.0-dops-503-20260123-1317
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2026-11-26T13:23:32.694386803Z"
+    description: A Helm chart for Kubernetes. Additional information is available
+      in [DOCUMENTATION.md](DOCUMENTATION.md)
+    digest: 632fddbf4b8b7dfcf4cd0994ade8ca437afe4760d817c93c48803f9a50fa7ad0
+    name: infra-sshd
+    type: application
+    urls:
+    - https://github.com/dbildungsplattform/helm-charts-registry/releases/download/infra-sshd-0.0.0-dops-1165-20261126-1321/infra-sshd-0.0.0-dops-1165-20261126-1321.tgz
+    version: 0.0.0-dops-1165-20261126-1321
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-10-21T20:33:03.630797711Z"
     description: A Helm chart for Kubernetes
     digest: a8b5ffe751d112a31a99e6e8c88decaeb9d145a29c1f9def08e990ee5a7fa9fb
@@ -294144,4 +294155,4 @@ entries:
     urls:
     - https://github.com/dBildungsplattform/helm-charts-registry/releases/download/wazuh-0.0.0-dbp-1363-20250325-1058/wazuh-0.0.0-dbp-1363-20250325-1058.tgz
     version: 0.0.0-dbp-1363-20250325-1058
-generated: "2026-11-26T12:57:47.986956991Z"
+generated: "2026-11-26T13:23:32.728215694Z"
