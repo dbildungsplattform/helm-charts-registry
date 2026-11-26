@@ -45,4 +45,7 @@ spec:
       {{- end }}
       restartPolicy: OnFailure
   backoffLimit: 4
+  {{- with .Values.extendedBootstrap.ttlSecondsAfterFinished }}
+  ttlSecondsAfterFinished: {{ . }}
+  {{- end }}
 {{ end }}

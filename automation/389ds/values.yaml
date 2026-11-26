@@ -20,6 +20,9 @@ persistence:
   enabled: true
   size: 10Gi
 
+pdb:
+  minAvailable: 1
+
 # -- this only has an effect if configured before helm install, otherwise cp /etc/dirsrv/schema/99user.ldif /data/config/schema/99user.ldif is needed
 customSchema: ""
 
@@ -36,6 +39,7 @@ tls:
 extendedBootstrap:
   annotations:
     "helm.sh/hook": "post-install"
+  ttlSecondsAfterFinished: 2592000 #30d
   # If you want to use extended bootstrap, define the peers below according to the number of replicas and their service names
   # Note that downsizing the replica count or disabling HA after enabling HA replication is not supported! Always check if the cluster is healthy and the config fits when downsizing!
   enabled: false
