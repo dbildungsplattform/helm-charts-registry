@@ -5,9 +5,9 @@
 replicaCount: 1
 
 image:
-  repository: schulcloud/infra-sshd
+  repository: ghcr.io/dbildungsplattform/infra-sshd
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "stable"
+  tag: "latest"
 service:
   # standalone: false
   type: NodePort
